@@ -1,0 +1,148 @@
+Microsoft Windows [Version 10.0.18362.295]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\oseghae.oaikhena>git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+C:\Users\oseghae.oaikhena>cd desktop
+
+C:\Users\oseghae.oaikhena\Desktop>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\oseghae.oaikhena\Desktop>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2A76-DAF2
+
+ Directory of C:\Users\oseghae.oaikhena\Desktop
+
+2019-08-30  02:13 PM    <DIR>          .
+2019-08-30  02:13 PM    <DIR>          ..
+2019-08-07  09:10 AM         2,392,061 Accounts.xlsx
+2019-08-14  09:41 AM         1,992,030 Active Cities Production Data.xlsx
+2019-08-14  09:41 AM            33,806 Active Countries Production Data.xlsx
+2019-08-13  09:27 AM            23,463 Active Provinces Production Data.xlsx
+2019-08-14  09:41 AM         9,593,589 All Accounts Temp Fields View Production Data.xlsx
+2019-08-07  09:03 AM         1,536,622 Cities.xlsx
+2019-08-07  09:04 AM            31,329 Countries.xlsx
+2019-07-31  08:08 AM    <DIR>          CRM Implementatioon
+2019-08-30  02:05 PM            32,736 CRM VNO & Service Profiles 08302019.xlsx
+2019-08-30  02:24 PM    <DIR>          DemoDrct
+2019-08-13  12:29 PM    <DIR>          Documentation
+2019-07-24  04:42 PM           453,878 Dynamics 365 CRM Customization Design Plan v0.04.docx
+2019-07-26  06:01 PM    <DIR>          GIT
+2019-07-26  04:34 PM    <DIR>          Gmail
+2019-08-07  09:05 AM            23,539 Provinces.xlsx
+2019-08-15  03:21 PM    <DIR>          Python
+2019-08-15  04:39 PM             1,517 Visual Studio 2017.lnk
+2019-08-15  04:39 PM             1,517 Visual Studio 2019.lnk
+2019-09-05  09:10 AM    <DIR>          VSApps
+2019-08-02  04:33 PM    <DIR>          XRM Toolbox
+              12 File(s)     16,116,087 bytes
+              10 Dir(s)  332,696,743,936 bytes free
+
+C:\Users\oseghae.oaikhena\Desktop>cd VSApps
+
+C:\Users\oseghae.oaikhena\Desktop\VSApps>git clone https://github.com/oseghr/JS-Project.git
+Cloning into 'JS-Project'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+
+C:\Users\oseghae.oaikhena\Desktop\VSApps>cd js-project
+
+C:\Users\oseghae.oaikhena\Desktop\VSApps\JS-Project>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2A76-DAF2
+
+ Directory of C:\Users\oseghae.oaikhena\Desktop\VSApps\JS-Project
+
+2019-09-05  09:14 AM    <DIR>          .
+2019-09-05  09:14 AM    <DIR>          ..
+2019-08-13  11:55 AM             3,045 FinalRetrieveCityFunction.js
+2019-09-05  09:14 AM                45 README.md
+               2 File(s)          3,090 bytes
+               2 Dir(s)  331,600,445,440 bytes free
+
+C:\Users\oseghae.oaikhena\Desktop\VSApps\JS-Project>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        FinalRetrieveCityFunction.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\oseghae.oaikhena\Desktop\VSApps\JS-Project>git add .
+
+C:\Users\oseghae.oaikhena\Desktop\VSApps\JS-Project>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   FinalRetrieveCityFunction.js
+
+
+C:\Users\oseghae.oaikhena\Desktop\VSApps\JS-Project>git commit -m "Initial commit"
+[master 975f4bd] Initial commit
+ 1 file changed, 66 insertions(+)
+ create mode 100644 FinalRetrieveCityFunction.js
+
+C:\Users\oseghae.oaikhena\Desktop\VSApps\JS-Project>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1020 bytes | 92.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/oseghr/JS-Project.git
+   3b100f4..975f4bd  master -> master
+
+C:\Users\oseghae.oaikhena\Desktop\VSApps\JS-Project>
