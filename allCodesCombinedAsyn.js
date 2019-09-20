@@ -514,14 +514,14 @@ function updatecheck(id,cityStatus,cityBillingStatus,cityShippingStatus,countryS
 
     // checks if the Status variables are "Passed" and updates the check field
     if ((cityStatus == "Passed") && (cityBillingStatus == "Passed") && (cityShippingStatus == "Passed")&& (countryStatus == "Passed")&& (countryBillingStatus == "Passed")&& (countryShippingStatus == "Passed")&& (provinceStatus == "Passed")&& (provinceBillingStatus == "Passed")&& (provinceShippingStatus == "Passed")) {
-        var dataPass = { "ni_check": "Passed 2" };
+        var dataPass = { "ni_check": "Passed" };
         // Updating the check field
         return Xrm.WebApi.updateRecord("account", ide, dataPass).then(
             function success(result) {},
             function(error) { alert(error.message); }
         );
     } else {
-        var dataFail = { "ni_check": "Failed 2" };
+        var dataFail = { "ni_check": "Failed" };
         return Xrm.WebApi.updateRecord("account", ide, dataFail).then(
             function success(result) {},
             function(error) { alert(error.message); }
