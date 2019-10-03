@@ -3,7 +3,7 @@
 function mainfunction() {
     var query = "?$select=accountid,name,_ni_city_value,_ni_citybilling_value,_ni_cityshipping_value,ni_citytemp,ni_citybillingtemp,ni_cityshippingtemp,ni_countrytemp,ni_countrybillingtemp,ni_countryshippingtemp,ni_provincetemp,ni_provincebillingtemp,ni_provinceshippingtemp,_ni_country_value,_ni_countrybilling_value,_ni_countryshipping_value,_ni_province_value,_ni_provincebilling_value,_ni_provinceshipping_value,ni_check&$top=50";
     accountsRecordsValidate(query);
-}
+} 
 
 //This function retrieves the account entity records
 //Checks all the required fields for each record
@@ -163,7 +163,7 @@ function accountsRecordsValidate(query) {
                     // checks if the nextlink has a valid string value and assigns it to "query" for next set of records
                     if(window.nextPageLink){
                         // assigns a substring of the nextlink to "query"
-                        query = window.nextPageLink.substr(71);  // for production use query = window.nextPageLink.substr(67)
+                        query = window.nextPageLink.substr(67);  // for production use query = window.nextPageLink.substr(67)
                         accountsRecordsValidate(query);
                     } else {
                         console.log("All accounts updated");
