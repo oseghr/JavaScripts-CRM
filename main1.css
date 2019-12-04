@@ -1,0 +1,11 @@
+.container {
+    border: 5px solid burlywood;
+    display: flex;
+}
+
+.container > div {
+    flex: 2;
+}
+
+
+

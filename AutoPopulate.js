@@ -82,6 +82,31 @@
 //     }
 // }
 
+                Xrm.WebApi.retrieveMultipleRecords('contact', "?$select=contactid,fullname,emailaddress1&$filter=fullname eq 'Oseghae Oaikhena'").then(
+                    function success(result) {
+                        // perform operations on on retrieved records
+                        console.log(result.entities[0]);
+                    },
+                    function (error) {
+                        console.log(error.message);
+                        // handle error conditions
+                    }
+                );
+
+
+                Xrm.WebApi.retrieveMultipleRecords('account', "fc87e907 - 90ae - e911 - a9ad - 000d3af4a818").then(
+                    function success(result) {
+                        // perform operations on on retrieved records
+                        console.log(result.entities[0]);
+                    },
+                    function (error) {
+                        console.log(error.message);
+                        // handle error conditions
+                    }
+                );
+
+
+
 
 
 //xrmwebapi test
