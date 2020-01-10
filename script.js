@@ -138,3 +138,66 @@ searchbar.addEventListener("keyup", function(e) {
         }
     });
 });
+
+
+
+
+
+// <!-- <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+//     <title>JavaScript DOM Tutorials</title>
+//     <link rel="stylesheet" href="main.css">
+// </head>
+// <body>
+//     <div id="wrapper">
+//         <header>
+//             <div id="page-banner">
+//                 <h1 class="title">MovieOrama</h1>
+//                 <a href="#">Net Ninja is good</a>
+//                 <p>Books For Ninja</p>
+//                 <form id="search-books">
+//                     <input type="text" placeholder="Search Books"/>
+//                 </form>
+//             </div>
+//         </header>
+//         <div id="book-list">
+            
+//             <h2 class="title">Books To Read</h2>
+            
+//             <ul>
+//                 <li>
+//                     <span class="name">Doctor Strange</span>
+//                     <button class="delete">delete</button>
+//                 </li>
+//                 <li>
+//                     <span class="name">The Wise Man's Fear</span>
+//                     <button class="delete">delete</button>
+//                 </li>
+//                 <li>
+//                     <span class="name">Rich Dad, Poor Dad</span>
+//                     <button class="delete">delete</button>
+//                 </li>
+//                 <li>
+//                     <span class="name">Avengers: The Final Battle</span>
+//                     <button class="delete">delete</button>
+//                 </li>                
+//             </ul>
+//         </div>
+//         <form id="add-books">
+//             <input type="checkbox" id="hide"/>
+//             <label for="hide">Hide All Books</label><br/>
+//             <input type="text" placeholder="Add a Book..."/>
+//             <button>Add</button>
+
+//         </form>
+
+
+//     </div>
+//     <script src="script.js"></script>
+// </body>
+// </html> --></meta>

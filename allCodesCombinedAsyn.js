@@ -62,7 +62,7 @@ function accountsRecordsValidate(query) {
                         var provinceShippingTemp1 = " \'"+ provinceShippingTemp + "\'";
 
                         // the field state functions checks if field variables have valid inputs and returns "Passed"
-                        var cityState = function() {
+                        var cityState = await function() {
                             if (mainCityPry != null) {
                                 return 'Passed';
                             } else if (cityTemp != null) {
@@ -72,7 +72,7 @@ function accountsRecordsValidate(query) {
                                 return "Passed";
                             }
                         };
-                        var cityBillingState = function() {
+                        var cityBillingState = await function() {
 
                             if (mainCityBilling != null) {
                                 return 'Passed';
@@ -82,7 +82,7 @@ function accountsRecordsValidate(query) {
                                 return "Passed";
                              }
                         };
-                        var cityShippingState = function() {
+                        var cityShippingState = await function() {
                             
                             if (mainCityShipping != null) {
                                 return 'Passed';
@@ -93,7 +93,7 @@ function accountsRecordsValidate(query) {
                             }
                         };
 
-                        var countryState = function() {
+                        var countryState = await function() {
                             if (mainCountryPry != null) {
                                 return 'Passed';
                             } else if (countryTemp != null) {
@@ -103,7 +103,7 @@ function accountsRecordsValidate(query) {
                                 return "Passed";
                             }
                         };
-                        var countryBillingState = function() {
+                        var countryBillingState = await function() {
                             if (mainCountryBilling != null) {
                                 return 'Passed';
                             } else if (countryBillingTemp != null) {
@@ -113,7 +113,7 @@ function accountsRecordsValidate(query) {
                                 return "Passed";
                             }
                         };
-                        var countryShippingState = function() {
+                        var countryShippingState = await function() {
                             if (mainCountryShipping != null) {
                                 return 'Passed';
                             } else if (countryShippingTemp != null) {
@@ -124,7 +124,7 @@ function accountsRecordsValidate(query) {
                             }
                         };
                         
-                        var provinceState = function() {
+                        var provinceState = await function() {
                             if (mainProvincePry  != null) {
                                 return 'Passed';
                             } else if (provinceTemp != null) {
@@ -134,7 +134,7 @@ function accountsRecordsValidate(query) {
                                 return "Passed";
                             }
                         };
-                        var provinceBillingState = function() {
+                        var provinceBillingState = await function() {
                             if (mainProvinceBilling != null) {
                                 return 'Passed';
                             } else if (provinceBillingTemp != null) {
@@ -144,7 +144,7 @@ function accountsRecordsValidate(query) {
                                 return "Passed";
                             }
                         };
-                        var provinceShippingState = function() {
+                        var provinceShippingState = await function() {
                             if (mainProvinceShipping != null) {
                                 return 'Passed';
                             } else if (provinceShippingTemp != null) {
@@ -158,6 +158,7 @@ function accountsRecordsValidate(query) {
                         //Assigns resolved requests to field status variables
                         var [cityStatus,cityBillingStatus,cityShippingStatus,countryStatus,countryBillingStatus,countryShippingStatus,provinceStatus,provinceBillingStatus,provinceShippingStatus] = await Promise.all ([cityState(),cityBillingState(),cityShippingState(),countryState(),countryBillingState(),countryShippingState(),provinceState(),provinceBillingState(),provinceShippingState()]);
                         await updatecheck(id,cityStatus,cityBillingStatus,cityShippingStatus,countryStatus,countryBillingStatus,countryShippingStatus,provinceStatus,provinceBillingStatus,provinceShippingStatus);
+                        console.log("completed");
                     }
 
                     // checks if the nextlink has a valid string value and assigns it to "query" for next set of records
@@ -166,7 +167,7 @@ function accountsRecordsValidate(query) {
                         query = window.nextPageLink.substr(67);  // for production use query = window.nextPageLink.substr(67)
                         accountsRecordsValidate(query);
                     } else {
-                        console.log("All accounts updated");
+                       alert("All accounts updated");
                     }
                 })();
   

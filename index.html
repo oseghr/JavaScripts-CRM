@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main1.css"> -->
+    <style>
+    
+    .container > div {
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: azure;
 
-    <title>JavaScript DOM Tutorials</title>
-    <link rel="stylesheet" href="main.css">
+
+}
+
+html, body {
+    background-color: aliceblue;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container > div:nth-child(1) {
+    background-color: aquamarine;
+}
+
+.container > div:nth-child(2) {
+    background-color: coral;
+}
+
+.container > div:nth-child(3) {
+    background-color: antiquewhite;
+}
+
+
+.container > div:nth-child(4) {
+    background-color: red;
+}
+
+.container {
+    border: 5px solid burlywood;
+    display: flex;
+}
+
+.container > div {
+    flex: 2;
+}
+   
+    
+    
+    
+    </style>
+    
 </head>
 <body>
-    <div id="wrapper">
-        <header>
-            <div id="page-banner">
-                <h1 class="title">MovieOrama</h1>
-                <a href="#">Net Ninja is good</a>
-                <p>Books For Ninja</p>
-                <form id="search-books">
-                    <input type="text" placeholder="Search Books"/>
-                </form>
-            </div>
-        </header>
-        <div id="book-list">
-            
-            <h2 class="title">Books To Read</h2>
-            
-            <ul>
-                <li>
-                    <span class="name">Doctor Strange</span>
-                    <button class="delete">delete</button>
-                </li>
-                <li>
-                    <span class="name">The Wise Man's Fear</span>
-                    <button class="delete">delete</button>
-                </li>
-                <li>
-                    <span class="name">Rich Dad, Poor Dad</span>
-                    <button class="delete">delete</button>
-                </li>
-                <li>
-                    <span class="name">Avengers: The Final Battle</span>
-                    <button class="delete">delete</button>
-                </li>                
-            </ul>
-        </div>
-        <form id="add-books">
-            <input type="checkbox" id="hide"/>
-            <label for="hide">Hide All Books</label><br/>
-            <input type="text" placeholder="Add a Book..."/>
-            <button>Add</button>
-
-        </form>
+    <nav class="container">
+        <div class="home">Home</div>
+        <div class="search">Search</div>
+        <div class="logout">Logout</div>
+        <div class="contact">Contact</div>
 
 
-    </div>
-    <script src="script.js"></script>
+    </nav>
+    <h1><strong>Welcome to Dynamics CRM</strong></h1>
+    
 </body>
 </html>
