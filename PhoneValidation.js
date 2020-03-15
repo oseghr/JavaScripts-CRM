@@ -5,7 +5,7 @@ function validatePhone() {
     mobiRegex = new RegExp(/^\+(?:[0-9] ?){6,14}[0-9]$/);
     if (phoneCleaned != null && mobiRegex.test(phoneCleaned)) {
        if (phoneCleaned.length == 12){
-          mobi.setValue(phoneCleaned.substr(0, 2) + " " + phoneCleaned.substr(2, 3) + " " + phoneCleaned.substr(5, 3) + " " + phoneCleaned.substr(8, 4)); 
+          mobi.setValue(phoneCleaned); 
           return true;
        }
        return true;
