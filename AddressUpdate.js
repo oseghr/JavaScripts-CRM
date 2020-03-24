@@ -5,7 +5,6 @@ function checkForm() {
   if (freeze) {
     // Make the field read only
     Xrm.Page.getControl("ni_postalcodebilling").setDisabled(true);
-
     Xrm.Page.getControl("ni_addressbilling").setDisabled(true);
 
     Xrm.Page.getControl("ni_citybilling").setDisabled(true);
@@ -20,7 +19,6 @@ function checkForm() {
   if (freezer) {
     // Make the field read only
     Xrm.Page.getControl("ni_postalcodeshipping").setDisabled(true);
-
     Xrm.Page.getControl("ni_addressshipping").setDisabled(true);
 
     Xrm.Page.getControl("ni_cityshipping").setDisabled(true);
@@ -57,7 +55,6 @@ function ReadOnlyBilling() {
 
     // copy values from primary address fields
     Xrm.Page.getAttribute("ni_postalcodebilling").setValue(postalcodebilling);
-
     Xrm.Page.getAttribute("ni_addressbilling").setValue(addressbilling);
 
     Xrm.Page.getAttribute("ni_citybilling").setValue(citybilling);
@@ -87,7 +84,6 @@ function ReadOnlyBilling() {
       
     // clears values from billing address fields
     Xrm.Page.getAttribute("ni_postalcodebilling").setValue(clear);
-
     Xrm.Page.getAttribute("ni_addressbilling").setValue(clear);
 
     Xrm.Page.getAttribute("ni_citybilling").setValue(clear);
@@ -100,7 +96,6 @@ function ReadOnlyBilling() {
 
     // make the fields editable
     Xrm.Page.getControl("ni_postalcodebilling").setDisabled(false);
-
     Xrm.Page.getControl("ni_addressbilling").setDisabled(false);
 
     Xrm.Page.getControl("ni_citybilling").setDisabled(false);
@@ -138,7 +133,6 @@ function ReadOnlyShipping() {
 
     // copy values from primary address fields
     Xrm.Page.getAttribute("ni_postalcodeshipping").setValue(postalcodeshipping);
-
     Xrm.Page.getAttribute("ni_addressshipping").setValue(addressshipping);
 
     Xrm.Page.getAttribute("ni_cityshipping").setValue(cityshipping);
@@ -155,7 +149,6 @@ function ReadOnlyShipping() {
 
     // Make the field read only
     Xrm.Page.getControl("ni_postalcodeshipping").setDisabled(true);
-
     Xrm.Page.getControl("ni_addressshipping").setDisabled(true);
 
     Xrm.Page.getControl("ni_cityshipping").setDisabled(true);
@@ -168,7 +161,6 @@ function ReadOnlyShipping() {
   } else {
     // clears values from shipping address fields
     Xrm.Page.getAttribute("ni_postalcodeshipping").setValue(clear);
-
     Xrm.Page.getAttribute("ni_addressshipping").setValue(clear);
 
     Xrm.Page.getAttribute("ni_cityshipping").setValue(clear);
@@ -181,7 +173,6 @@ function ReadOnlyShipping() {
 
     // make the fields editable
     Xrm.Page.getControl("ni_postalcodeshipping").setDisabled(false);
-
     Xrm.Page.getControl("ni_addressshipping").setDisabled(false);
 
     Xrm.Page.getControl("ni_cityshipping").setDisabled(false);
