@@ -18,9 +18,7 @@ function CityUpDate(query){
                         var cityIde = result1.entities[0].ownerid;
                         console.log(cityIde);
                         (async function(){
-                            for await (var record of result.entities) {
-                                       
-                                // if (record._ni_country_value == null) {
+                            for await (var record of result.entities) {      
             
                                     var datapass = {
                                         "ownerid@odata.bind" : "/systemusers("+cityIde+")",  //ownerid field uses the fieldname and has different datatype "owner"
@@ -58,7 +56,6 @@ function CityUpDate(query){
                         // handle error conditions
                     }
                 );
-
             }
 
         },
