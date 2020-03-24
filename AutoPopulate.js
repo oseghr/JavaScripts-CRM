@@ -82,28 +82,28 @@
 //     }
 // }
 
-                Xrm.WebApi.retrieveMultipleRecords('contact', "?$select=contactid,fullname,emailaddress1&$filter=fullname eq 'Oseghae Oaikhena'").then(
-                    function success(result) {
+            Xrm.WebApi.retrieveMultipleRecords('contact', "?$select=contactid,fullname,emailaddress1&$filter=fullname eq 'Oseghae Oaikhena'").then(
+                        function success(result) {
                         // perform operations on on retrieved records
                         console.log(result.entities[0]);
-                    },
-                    function (error) {
+                        },
+                        function (error) {
                         console.log(error.message);
                         // handle error conditions
-                    }
-                );
+                        }
+            );
 
 
-                Xrm.WebApi.retrieveMultipleRecords('account', "fc87e907 - 90ae - e911 - a9ad - 000d3af4a818").then(
-                    function success(result) {
+            Xrm.WebApi.retrieveMultipleRecords('account', "fc87e907 - 90ae - e911 - a9ad - 000d3af4a818").then(
+                        function success(result) {
                         // perform operations on on retrieved records
                         console.log(result.entities[0]);
-                    },
-                    function (error) {
+                        },
+                        function (error) {
                         console.log(error.message);
                         // handle error conditions
-                    }
-                );
+                        }
+            );
 
 
 
@@ -163,49 +163,49 @@ function AccountOnChange() {
 }
 
 
-//Odata test
-function AccountOnChange() {
-    console.log("==START==");
-    var account = Xrm.Page.getAttribute("parentaccountid").getValue();
-    console.log("==ONE Start==");
+//Odata test 
+//function AccountOnChange() {
+//    console.log("==START==");
+//    var account = Xrm.Page.getAttribute("parentaccountid").getValue();
+//    console.log("==ONE Start==");
 
-    if (account == null) {
-        return;
-    }
+//    if (account == null) {
+//        return;
+//    }
 
-    var serverUrl = Xrm.Page.context.getClientUrl();
-    var oDataSelect = serverUrl + "/XRMServices/2011/OrganizationData.svc/AccountSet?$select=Name,new_user,new_user1&?$filter=AccountId eq \'" + account[0].id + "\'";
-    console.log("==TWO Start==");
-    console.log("ODATA Link: "+oDataSelect);
-    var retrieveReq = new XMLHttpRequest();
-    retrieveReq.open("GET", oDataSelect, false);
-    retrieveReq.setRequestHeader("Accept", "application/json");
-    retrieveReq.setRequestHeader("Content-Type", "application/json;charset=utf-8");
-    retrieveReq.onreadystatechange = function () {
-        GetAccountData(this);
-    };
-    retrieveReq.send();
-    console.log("END");
-}
+ //   var serverUrl = Xrm.Page.context.getClientUrl();
+  //  var oDataSelect = serverUrl + "/XRMServices/2011/OrganizationData.svc/AccountSet?$select=Name,new_user,new_user1&?$filter=AccountId eq \'" + account[0].id + "\'";
+//    console.log("==TWO Start==");
+ //   console.log("ODATA Link: "+oDataSelect);
+ //   var retrieveReq = new XMLHttpRequest();
+//    retrieveReq.open("GET", oDataSelect, false);
+//    retrieveReq.setRequestHeader("Accept", "application/json");
+//    retrieveReq.setRequestHeader("Content-Type", "application/json;charset=utf-8");
+//    retrieveReq.onreadystatechange = function () {
+//        GetAccountData(this);
+//    };
+//    retrieveReq.send();
+//    console.log("END");
+//}
 
-function GetAccountData(retrieveReq) {
-    console.log("get data function ENTERED");
-    if (retrieveReq.readyState == 4) {
-        if (retrieveReq.status == 200) {
-            console.log("get RETRIEVE entered");
-            var retrieved = JSON.parse(retrieveReq.responseText).d;
+//function GetAccountData(retrieveReq) {
+  //  console.log("get data function ENTERED");
+ //   if (retrieveReq.readyState == 4) {
+ //       if (retrieveReq.status == 200) {
+ //           console.log("get RETRIEVE entered");
+ //           var retrieved = JSON.parse(retrieveReq.responseText).d;
 
-            console.log(lookup);
+ //           console.log(lookup);
 
-            console.log(retrieved);
-            Xrm.Page.getAttribute("new_user").setValue(retrieved.new_user);
-            Xrm.Page.getAttribute("new_user1").setValue(retrieved.new_user1);
+//            console.log(retrieved);
+ //           Xrm.Page.getAttribute("new_user").setValue(retrieved.new_user);
+ //           Xrm.Page.getAttribute("new_user1").setValue(retrieved.new_user1);
             
-            console.log("get retrieve END");
+ //           console.log("get retrieve END");
 
-        }
-    }
-}
+//        }
+//    }
+//}
 
 
 
